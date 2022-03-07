@@ -4,6 +4,8 @@ trigger:
 variables:
   BUILD_COMMIT: db58ff3f50236496788dd747b62cb4cd32fe33a6
   ANACONDA_ORG: ofajardo
+  MACOSX_DEPLOYMENT_TARGET: "10.9"
+  # set Anaconda token in azure
 
 jobs:
   - template: azure/posix.yml
