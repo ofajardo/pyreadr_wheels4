@@ -1,10 +1,9 @@
 trigger:
-- main
+- master
 
 variables:
   BUILD_COMMIT: db58ff3f50236496788dd747b62cb4cd32fe33a6
   ANACONDA_ORG: ofajardo
-  MACOSX_DEPLOYMENT_TARGET: "10.9"
   # set Anaconda token in azure
 
 jobs:
@@ -29,22 +28,18 @@ jobs:
           MB_PYTHON_VERSION: "3.7"
           MB_PYTHON_OSX_VER: "10.9"
           PLAT: arm64
-          MACOSX_DEPLOYMENT_TARGET: "12.0"
         py_3.8_64_arm64:
           MB_PYTHON_VERSION: "3.8"
           MB_PYTHON_OSX_VER: "10.9"
           PLAT: arm64
-          MACOSX_DEPLOYMENT_TARGET: "12.0"
         py_3.9_64_arm64:
           MB_PYTHON_VERSION: "3.9"
           MB_PYTHON_OSX_VER: "10.9"
           PLAT: arm64
-          MACOSX_DEPLOYMENT_TARGET: "12.0"
         py_3.10_64_arm64:
           MB_PYTHON_VERSION: "3.10"
           MB_PYTHON_OSX_VER: "11.0"
           PLAT: arm64
-          MACOSX_DEPLOYMENT_TARGET: "12.0"
 
   - template: azure/posix.yml
     parameters:
