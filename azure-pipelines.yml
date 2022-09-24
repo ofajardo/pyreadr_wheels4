@@ -5,7 +5,7 @@ variables:
   BUILD_COMMIT: 49153b5a58a97935cfcfd2b0b6578ff33f2f6202
   ANACONDA_ORG: ofajardo
   # set Anaconda token in azure
-  MACOSX_DEPLOYMENT_TARGET: "10.9"
+  MACOSX_DEPLOYMENT_TARGET: "11"
 
 jobs:
   - template: azure/posix.yml
@@ -18,60 +18,14 @@ jobs:
           MB_PYTHON_OSX_VER: "10.9"
           PLAT: arm64
           MACOSX_DEPLOYMENT_TARGET: "12.0"
-        py_3.8_64_universal2:
-          MB_PYTHON_VERSION: "3.8"
+        py_3.9_64_arm64:
+          MB_PYTHON_VERSION: "3.9"
           MB_PYTHON_OSX_VER: "10.9"
-          PLAT: universal2
+          PLAT: arm64
           MACOSX_DEPLOYMENT_TARGET: "12.0"
-        #py_3.9_64_arm64:
-          #MB_PYTHON_VERSION: "3.9"
-          #MB_PYTHON_OSX_VER: "10.9"
-          #PLAT: arm64
-        #py_3.10_64_arm64:
-          #MB_PYTHON_VERSION: "3.10"
-          #MB_PYTHON_OSX_VER: "11.0"
-          #PLAT: arm64
-
-  - template: azure/posix.yml
-    parameters:
-      name: linux
-      vmImage: ubuntu-20.04
-      matrix:
-        py_3.7_64manylinux1:
-          MB_PYTHON_VERSION: "3.7"
-          MB_ML_VER: "2014"
-        py_3.8_64manylinux1:
-          MB_PYTHON_VERSION: "3.8"
-          MB_ML_VER: "2014"
-        py_3.9_64manylinux1:
-          MB_PYTHON_VERSION: "3.9"
-          MB_ML_VER: "2014"
-        py_3.10_64manylinux1:
+        py_3.10_64_arm64:
           MB_PYTHON_VERSION: "3.10"
-          MB_ML_VER: "2014"
+          MB_PYTHON_OSX_VER: "11.0"
+          PLAT: arm64
+          MACOSX_DEPLOYMENT_TARGET: "12.0"
 
-  - template: azure/posix.yml
-    parameters:
-      name: linuxaarch64
-      vmImage: ubuntu-20.04
-      matrix:
-        py_3.7_aarch64manylinux2014:
-          MB_PYTHON_VERSION: "3.7"
-          MB_ML_VER: "2014"
-          PLAT: "aarch64"
-          DOCKER_TEST_IMAGE: "multibuild/focal_{PLAT}"
-        py_3.8_aarch64manylinux2014:
-          MB_PYTHON_VERSION: "3.8"
-          MB_ML_VER: "2014"
-          PLAT: "aarch64"
-          DOCKER_TEST_IMAGE: "multibuild/focal_{PLAT}"
-        py_3.9_aarch64manylinux2014:
-          MB_PYTHON_VERSION: "3.9"
-          MB_ML_VER: "2014"
-          PLAT: "aarch64"
-          DOCKER_TEST_IMAGE: "multibuild/focal_{PLAT}"
-        py_3.10_aarch64manylinux2014:
-          MB_PYTHON_VERSION: "3.10"
-          MB_ML_VER: "2014"
-          PLAT: "aarch64"
-          DOCKER_TEST_IMAGE: "multibuild/focal_{PLAT}"
