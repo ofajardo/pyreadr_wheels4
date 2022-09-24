@@ -5,7 +5,7 @@ environment:
 
   global:
     # Remember to edit .travis.yml too
-    BUILD_COMMIT: 49cbe3ea657ac1711a016fc9e58b875510f75660
+    BUILD_COMMIT: 49153b5a58a97935cfcfd2b0b6578ff33f2f6202
     ANACONDA_ORG: ofajardo
     # ANACONDA_TOKEN should be set in appveyor
 
