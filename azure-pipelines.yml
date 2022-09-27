@@ -16,7 +16,6 @@ jobs:
           MB_PYTHON_VERSION: "3.8"
           MB_PYTHON_OSX_VER: "10.9"
           PLAT: arm64
-          MACOSX_DEPLOYMENT_TARGET: "11.0"
         py_3.8_64:
           MB_PYTHON_VERSION: "3.8"
           MB_PYTHON_OSX_VER: "10.9"
