@@ -84,7 +84,7 @@ jobs:
           install_run $PLAT
           teardown_test_venv
         displayName: Install wheel and test
-        condition: ne(variables['PLAT'], 'arm64')
+        #condition: ne(variables['PLAT'], 'arm64')
 
       - bash: |
           echo "##vso[task.prependpath]$CONDA/bin"
