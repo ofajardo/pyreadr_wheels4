@@ -16,7 +16,6 @@ environment:
     # The list here is complete (excluding Python 2.6, which
     # isn't covered by this document) at the time of writing.
 
-    - PYTHON_VERSION: "3.7"
     - PYTHON_VERSION: "3.8"
     - PYTHON_VERSION: "3.9"
     - PYTHON_VERSION: "3.10"
@@ -34,7 +33,7 @@ install:
   - call %CONDAPATH%\Scripts\activate
   # prepare environment with conda
   - conda config --set always_yes yes --set changeps1 no
-  - conda update -q conda
+    #- conda update -q conda
   # create an environment with the appropiate python
   - conda create -y -n currentenv python=%PYTHON_VERSION%
   - conda activate currentenv
