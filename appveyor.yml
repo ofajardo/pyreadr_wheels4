@@ -33,7 +33,7 @@ install:
   - call %CONDAPATH%\Scripts\activate
   # prepare environment with conda
   - conda config --set always_yes yes --set changeps1 no
-    #- conda update -q conda
+  - conda update -q conda
   # create an environment with the appropiate python
   - conda create -y -n currentenv python=%PYTHON_VERSION%
   - conda activate currentenv
