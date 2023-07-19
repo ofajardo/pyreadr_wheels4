@@ -2,7 +2,7 @@ trigger:
 - master
 
 variables:
-  BUILD_COMMIT: 49153b5a58a97935cfcfd2b0b6578ff33f2f6202
+  BUILD_COMMIT: a53a3021aab774d2b98b09c65b83cc9f34e8ccb2
   ANACONDA_ORG: ofajardo
   # set Anaconda token in azure
 
