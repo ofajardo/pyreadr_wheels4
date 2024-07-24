@@ -2,7 +2,7 @@ trigger:
 - master
 
 variables:
-  BUILD_COMMIT: 09d77bc4b674cb061f6284aafb04838834ec7e90
+  BUILD_COMMIT: 8eb308a4b58a61a1b35584aedfd1ed533258e91f
   ANACONDA_ORG: ofajardo
   # set Anaconda token in azure
 
@@ -10,7 +10,7 @@ jobs:
   - template: azure/posix.yml
     parameters:
       name: macOS
-      vmImage: macOS-11
+      vmImage: macOS-12
       matrix:
         py_3.8_64:
           MB_PYTHON_VERSION: "3.8"
