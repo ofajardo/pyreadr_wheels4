@@ -5,7 +5,7 @@ environment:
 
   global:
     # Remember to edit .travis.yml too
-    BUILD_COMMIT: 2b97fdc00d4b1703d8a46b8e75d95146daa266e4
+    BUILD_COMMIT: 38980b2f8a02bc6220a325753b4d89ebe09c4d6f
     ANACONDA_ORG: ofajardo
     # ANACONDA_TOKEN should be set in appveyor
 
@@ -16,8 +16,6 @@ environment:
     # The list here is complete (excluding Python 2.6, which
     # isn't covered by this document) at the time of writing.
 
-    - PYTHON_VERSION: "3.8"
-    - PYTHON_VERSION: "3.9"
     - PYTHON_VERSION: "3.10"
     - PYTHON_VERSION: "3.11"
     - PYTHON_VERSION: "3.12"
@@ -47,10 +45,7 @@ install:
   # install necessary packages
   #- conda install -q setuptools pip cython wheel
   - pip install cython
-  - conda install -c conda-forge libpython
-  # mingw64 toolchain to compile python extensions
-  #- conda install -q -c msys2 m2w64-toolchain
-  - conda install -q -c conda-forge m2w64-toolchain
+  - conda install -c conda-forge libpython gxx
 
 
 build_script:
