@@ -2,7 +2,7 @@ trigger:
 - master
 
 variables:
-  BUILD_COMMIT: 96109a9be5b8789d29f07e0a016d9b10f351e1fa
+  BUILD_COMMIT: f11ebce22fe7ae2c89de51392d7c202e33df4557
   ANACONDA_ORG: ofajardo
   # set Anaconda token in azure
 
@@ -48,7 +48,7 @@ jobs:
   - template: azure/posix.yml
     parameters:
       name: linux
-      vmImage: ubuntu-20.04
+      vmImage: ubuntu-24.04
       matrix:
         py_3.10_64manylinux1:
           MB_PYTHON_VERSION: "3.10"
@@ -66,18 +66,8 @@ jobs:
   - template: azure/posix.yml
     parameters:
       name: linuxaarch64
-      vmImage: ubuntu-20.04
+      vmImage: ubuntu-24.04
       matrix:
-        py_3.8_aarch64manylinux2014:
-          MB_PYTHON_VERSION: "3.8"
-          MB_ML_VER: "2014"
-          PLAT: "aarch64"
-          DOCKER_TEST_IMAGE: "multibuild/focal_{PLAT}"
-        py_3.9_aarch64manylinux2014:
-          MB_PYTHON_VERSION: "3.9"
-          MB_ML_VER: "2014"
-          PLAT: "aarch64"
-          DOCKER_TEST_IMAGE: "multibuild/focal_{PLAT}"
         py_3.10_aarch64manylinux2014:
           MB_PYTHON_VERSION: "3.10"
           MB_ML_VER: "2014"
@@ -98,3 +88,4 @@ jobs:
           MB_ML_VER: "2014"
           PLAT: "aarch64"
           DOCKER_TEST_IMAGE: "multibuild/focal_{PLAT}"
+
