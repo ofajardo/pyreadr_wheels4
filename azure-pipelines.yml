@@ -60,19 +60,19 @@ jobs:
       matrix:
         py_3.10_64manylinux1:
           MB_PYTHON_VERSION: "3.10"
-          MB_ML_VER: "2014"
+          MB_ML_VER: "2_28"
         py_3.11_64manylinux1:
           MB_PYTHON_VERSION: "3.11"
-          MB_ML_VER: "2014"
+          MB_ML_VER: "2_28"
         py_3.12_64manylinux1:
           MB_PYTHON_VERSION: "3.12"
-          MB_ML_VER: "2014"
+          MB_ML_VER: "2_28"
         py_3.13_64manylinux1:
           MB_PYTHON_VERSION: "3.13"
-          MB_ML_VER: "2014"
+          MB_ML_VER: "2_28"
         py_3.14_64manylinux1:
           MB_PYTHON_VERSION: "3.14"
-          MB_ML_VER: "2014"
+          MB_ML_VER: "2_28"
 
   - template: azure/posix.yml
     parameters:
@@ -81,27 +81,27 @@ jobs:
       matrix:
         py_3.10_aarch64manylinux2014:
           MB_PYTHON_VERSION: "3.10"
-          MB_ML_VER: "2014"
+          MB_ML_VER: "2_28"
           PLAT: "aarch64"
           DOCKER_TEST_IMAGE: "multibuild/focal_{PLAT}"
         py_3.11_aarch64manylinux2014:
           MB_PYTHON_VERSION: "3.11"
-          MB_ML_VER: "2014"
+          MB_ML_VER: "2_28"
           PLAT: "aarch64"
           DOCKER_TEST_IMAGE: "multibuild/focal_{PLAT}"
         py_3.12_aarch64manylinux2014:
           MB_PYTHON_VERSION: "3.12"
-          MB_ML_VER: "2014"
+          MB_ML_VER: "2_28"
           PLAT: "aarch64"
           DOCKER_TEST_IMAGE: "multibuild/focal_{PLAT}"
         py_3.13_aarch64manylinux2014:
           MB_PYTHON_VERSION: "3.13"
-          MB_ML_VER: "2014"
+          MB_ML_VER: "2_28"
           PLAT: "aarch64"
           DOCKER_TEST_IMAGE: "multibuild/focal_{PLAT}"
         py_3.14_aarch64manylinux2014:
           MB_PYTHON_VERSION: "3.14"
-          MB_ML_VER: "2014"
+          MB_ML_VER: "2_28"
           PLAT: "aarch64"
           DOCKER_TEST_IMAGE: "multibuild/focal_{PLAT}"
 
